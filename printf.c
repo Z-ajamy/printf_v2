@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
     str.buffer = buffer;
 
     va_start(args, format);
-    str.args_ptr = &args;
+    __va_copy(str.args, args);
 
     err = controller(str_p);
 
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
         str.buffer = NULL;
     }
     va_end(args);
-    str.args_ptr = NULL;
+    va_end(str.args);
     if (err)
         return -1;
 

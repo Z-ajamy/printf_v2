@@ -5,7 +5,7 @@ int print_str(str_t *str_p)
     char *p = NULL;
     int err = 0;
 
-    p = va_arg(*(str_p->args_ptr), char *);
+    p = va_arg(str_p->args, char *);
     if (!p)
         p = "(null)";
     

@@ -11,7 +11,7 @@ typedef struct  str_s
     int num_printed;
     int num;
     int flags;
-    va_list *args_ptr;
+    va_list args;
     const char *format;
 } str_t;
 
