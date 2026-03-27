@@ -6,7 +6,6 @@ int _printf(const char *format, ...)
     str_t str = {0};
     str_t *str_p = &str;
     char *buffer;
-    va_list args;
 
     if (!format)
         return -1;
@@ -17,8 +16,7 @@ int _printf(const char *format, ...)
         return -1;
     str.buffer = buffer;
 
-    va_start(args, format);
-    __va_copy(str.args, args);
+    va_start(str.args, format);
 
     err = controller(str_p);
 
@@ -28,7 +26,6 @@ int _printf(const char *format, ...)
         buffer = NULL;
         str.buffer = NULL;
     }
-    va_end(args);
     va_end(str.args);
     if (err)
         return -1;
