@@ -29,6 +29,8 @@ int controller(str_t *str_p)
         {
             if (*(p + 1) == '\0')
             {
+                if (str_p->buff_index > 0)
+                    flush_buffer(str_p);
                 return -1;
             }
             if (fun_arr[(int)(*(p + 1))])

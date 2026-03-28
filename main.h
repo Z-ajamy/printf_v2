@@ -4,6 +4,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+#define _IOLBF 1
+#define _IONBF 2
+
+#define BUFSIZE 1024
+
+
 typedef struct  str_s
 {
     char *buffer;
@@ -13,6 +19,8 @@ typedef struct  str_s
     int flags;
     va_list args;
     const char *format;
+    int BF_type;
+    int fd;
 } str_t;
 
 int _printf(const char *format, ...);
