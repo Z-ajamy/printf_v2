@@ -55,6 +55,16 @@ int main(void)
     len2 = printf("Unsigned octal:[%o]\n", ui);
     printf("Length:[%d, %i]\n", len, len2);
 
+    len = _printf("Unsigned hexadecimal:[%x]\n", ui);
+    len2 = printf("Unsigned hexadecimal:[%x]\n", ui);
+    printf("Length:[%d, %i]\n", len, len2);
+
+
+    
+    len = _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    len2 = printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Length:[%d, %i]\n", len, len2);
+
 
     /*
     addr = (void *)0x7ffe637541f0;
