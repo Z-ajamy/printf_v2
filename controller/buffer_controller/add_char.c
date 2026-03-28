@@ -10,6 +10,7 @@ int add_char_to_buffer(str_t *str_p, char c)
         if (err)
             return err;
     }
+
     str_p->buffer[str_p->buff_index] = c;
     str_p->buff_index++;
 

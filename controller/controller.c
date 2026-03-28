@@ -15,6 +15,7 @@ int controller(str_t *str_p)
     static int (*fun_arr[256])(str_t *str_p) = {NULL};
     static int is_init = 0;
     const char *p = str_p->format;
+    unsigned char next_char;
 
     if (!is_init)
     {
@@ -33,9 +34,10 @@ int controller(str_t *str_p)
                     flush_buffer(str_p);
                 return -1;
             }
-            if (fun_arr[(int)(*(p + 1))])
+            next_char = (unsigned char)(*(p + 1));
+            if (fun_arr[next_char])
             {
-                err = fun_arr[(int)(*(p + 1))](str_p);
+                err = fun_arr[next_char](str_p);
                 p++;
             }
             else
