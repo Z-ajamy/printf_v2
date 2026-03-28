@@ -14,5 +14,7 @@ int print_unsigned(str_t *str_p);
 int print_oct(str_t *str_p);
 int print_hex(str_t *str_p);
 int print_HEX(str_t *str_p);
+int print_Str(str_t *str_p);
+
 
 #endif

@@ -11,7 +11,8 @@ int main(void)
     
     int len;
     int len2;
-    char *p = NULL;
+    char *p = "Hi\n";
+    char *P = "Best\nSchool";
     unsigned int ui;
 
     /*
@@ -64,6 +65,10 @@ int main(void)
     len = _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     len2 = printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Length:[%d, %i]\n", len, len2);
+
+    
+    len = _printf("String:[%S]\n", P);
+    printf("Length:[%d]\n", len);
 
 
     /*

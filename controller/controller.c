@@ -12,8 +12,7 @@ void get_specifiers(int (*fun_arr[])(str_t *str_p))
     fun_arr[(int)'o'] = print_oct;
     fun_arr[(int)'x'] = print_hex;
     fun_arr[(int)'X'] = print_HEX;
-
-
+    fun_arr[(int)'S'] = print_Str;
 
 }
 
