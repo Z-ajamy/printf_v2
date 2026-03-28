@@ -5,6 +5,8 @@
 
 int put_i(unsigned x, str_t *str_p);
 int put_o(unsigned x, str_t *str_p);
-int put_x(unsigned int x, str_t *str_p, int is_upper);
+int put_x(unsigned long x, str_t *str_p, int is_upper);
+int put_str(const char *p, str_t *str_p);
+
 
 #endif

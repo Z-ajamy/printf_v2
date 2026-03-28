@@ -1,6 +1,6 @@
 #include "helpers.h"
 
-int put_x(unsigned int x, str_t *str_p, int is_upper)
+int put_x(unsigned long x, str_t *str_p, int is_upper)
 {
 	int err = 0;
 	char *h = "0123456789abcdef";

@@ -14,10 +14,8 @@ int main(void)
     char *p = "Hi\n";
     char *P = "Best\nSchool";
     unsigned int ui;
-
-    /*
     void *addr;
-    */
+    
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
@@ -70,12 +68,14 @@ int main(void)
     len = _printf("String:[%S]\n", P);
     printf("Length:[%d]\n", len);
 
+    addr = (void *)0x7ffe637541f0;
+    len = printf("Address:[%p]\n", addr);
+    len2 = _printf("Address:[%p]\n", addr);
+    printf("Length:[%d, %i]\n", len, len2);
 
     /*
-    addr = (void *)0x7ffe637541f0;
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
     */
     return (0);
