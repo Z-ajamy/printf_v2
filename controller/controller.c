@@ -12,10 +12,16 @@ void get_specifiers(int (*fun_arr[])(str_t *str_p))
 int controller(str_t *str_p)
 {
     int err = 0;
-    int (*fun_arr[256])(str_t *str_p) = {NULL};
+    static int (*fun_arr[256])(str_t *str_p) = {NULL};
+    static int is_init = 0;
     const char *p = str_p->format;
 
-    get_specifiers(fun_arr);
+    if (!is_init)
+    {
+            get_specifiers(fun_arr);
+            is_init = 1;
+    }
+    
     
     while (*p)
     {
