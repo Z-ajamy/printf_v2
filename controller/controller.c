@@ -8,7 +8,7 @@ void get_specifiers(int (*fun_arr[])(str_t *str_p))
     fun_arr[(int)'d'] = print_int;
     fun_arr[(int)'i'] = print_int;
     fun_arr[(int)'b'] = print_bool;
-
+    fun_arr[(int)'u'] = print_unsigned;
 }
 
 int controller(str_t *str_p)

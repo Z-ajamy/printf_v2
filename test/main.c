@@ -12,9 +12,9 @@ int main(void)
     int len;
     int len2;
     char *p = NULL;
+    unsigned int ui;
 
     /*
-    unsigned int ui;
     void *addr;
     */
 
@@ -45,13 +45,14 @@ int main(void)
     len = _printf("%b\n", 98);
     printf("Length:[%d]\n", len);
 
+    ui = (unsigned int)INT_MAX + 1024;
+    len = _printf("Unsigned:[%u]\n", ui);
+    len2 = printf("Unsigned:[%u]\n", ui);
+    printf("Length:[%d, %i]\n", len, len2);
 
 
     /*
-    ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
     _printf("Unsigned octal:[%o]\n", ui);
     printf("Unsigned octal:[%o]\n", ui);
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
