@@ -73,10 +73,9 @@ int main(void)
     len2 = _printf("Address:[%p]\n", addr);
     printf("Length:[%d, %i]\n", len, len2);
 
-    /*
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Address:[%p]\n", addr);
-    */
+
+    
+    len = printf("Address:[%+d]\n", -5);
+    printf("Length:[%d]\n", len);
     return (0);
 }
