@@ -7,6 +7,8 @@ void get_specifiers(int (*fun_arr[])(str_t *str_p))
     fun_arr[(int)'s'] = print_str;
     fun_arr[(int)'d'] = print_int;
     fun_arr[(int)'i'] = print_int;
+    fun_arr[(int)'b'] = print_bool;
+
 }
 
 int controller(str_t *str_p)

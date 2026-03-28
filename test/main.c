@@ -42,6 +42,10 @@ int main(void)
     len2 = printf("Negative:[%d]\n", -762534);
     printf("Length:[%d, %i]\n", len, len2);
 
+    len = _printf("%b\n", 98);
+    printf("Length:[%d]\n", len);
+
+
 
     /*
     ui = (unsigned int)INT_MAX + 1024;
