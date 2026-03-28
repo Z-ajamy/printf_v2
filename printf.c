@@ -5,7 +5,6 @@ int _printf(const char *format, ...)
     int err;
     str_t str = {0};
     str_t *str_p = &str;
-    char *buffer;
     char buffer[BUFSIZE];
 
     str_p->fd = 1; /*stdout*/
@@ -14,20 +13,12 @@ int _printf(const char *format, ...)
     if (!format)
         return -1;
     str.format = format;
-
-        return -1;
     str.buffer = buffer;
 
     va_start(str.args, format);
 
     err = controller(str_p);
 
-    if(buffer)
-    {
-        free(buffer);
-        buffer = NULL;
-        str.buffer = NULL;
-    }
     va_end(str.args);
     if (err)
         return -1;

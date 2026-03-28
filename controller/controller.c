@@ -2,11 +2,11 @@
 
 void get_specifiers(int (*fun_arr[])(str_t *str_p))
 {
-    fun_arr[37] = print_pres;
-    fun_arr[99] = print_char;
-    fun_arr[115] = print_str;
-    fun_arr[100] = print_int;
-    fun_arr[105] = print_int;
+    fun_arr[(int)'%'] = print_pres;
+    fun_arr[(int)'c'] = print_char;
+    fun_arr[(int)'s'] = print_str;
+    fun_arr[(int)'d'] = print_int;
+    fun_arr[(int)'i'] = print_int;
 }
 
 int controller(str_t *str_p)
