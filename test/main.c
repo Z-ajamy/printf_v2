@@ -34,7 +34,7 @@ int main(void)
     len2 = printf("String:[%s]\n", p);
     printf("Length:[%d, %i]\n", len, len2);
 
-    len = _printf("num:[%d, %i]\n", len, len);
+    len = _printf("num:[%d, %i]\n", -2147483648, len);
     len2 = printf("num:[%d, %i]\n", len2, len2);
     printf("Length:[%d, %i]\n", len, len2);
 

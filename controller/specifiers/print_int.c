@@ -13,7 +13,7 @@ int print_int(str_t *str_p)
         err = add_char_to_buffer(str_p, '-');
         if (err)
             return err;
-        u = -i;
+        u = (unsigned int)(~i) + 1; //BitWise get a positive bumber -Safe with Max Negative
     }
     else
         u = i;
