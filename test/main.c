@@ -75,7 +75,7 @@ int main(void)
 
 
     
-    len = printf("Address:[%+d]\n", -5);
+    len = printf("int:[%+d]\n", -5);
     printf("Length:[%d]\n", len);
     return (0);
 }

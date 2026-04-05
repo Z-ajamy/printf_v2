@@ -13,7 +13,7 @@ int flush_buffer(str_t *str_p)
     {
         written = write(str_p->fd, str_p->buffer + total_written, to_write - total_written);
         if (written < 0)
-            return 1;
+            return -1;
         total_written += written;
     }
 
