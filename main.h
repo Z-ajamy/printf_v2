@@ -12,15 +12,13 @@
 
 typedef struct  str_s
 {
-    char *buffer;
+    int BF_type; /*Buffer type*/
+    int fd; /*file descriptor*/
     int buff_index;
     int num_printed;
-    int num;
-    int flags;
+    char *buffer;
+    const char *format; /*ptr to the input-> srt _printf(const char *format, ...)*/
     va_list args;
-    const char *format;
-    int BF_type;
-    int fd;
 } str_t;
 
 int _printf(const char *format, ...);
